@@ -1,0 +1,593 @@
+
+<script disable-devtool-auto='true' src='https://cdn.jsdelivr.net/npm/disable-devtool' clear-log='true'   
+
+  disable-select='true' disable-copy='true' disable-cut='true'   
+
+  disable-paste='true'></script>
+
+<html>
+
+<head>
+
+<title>Jio Cinema</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="">
+<link rel="stylesheet" href="style.css">
+<!-- ===== Boxicons CSS ===== -->
+<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+
+
+<style>
+body {
+/* display: flex; */
+align-items: center;
+justify-content: center;
+margin: 0 12px;
+height: 100%;
+background-color: #f1f1f1;
+
+}
+
+.box-shadow {
+font-family: sans-serif;
+font-weight: 600;
+background-color: #2ecc71;
+color: white;
+padding: 10px;
+border-radius: 4px;
+box-shadow: 2px 2px 20px 23px #7fecad;
+background-color: #f8f8f8;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+text-align: center;
+font-family: 'Arial', sans-serif;
+font-size: 15px;
+color: #333;
+}
+
+#title {
+font-family: "Archivo", sans-serif;
+font-weight: bold;
+font-size: 35px;
+color: #ff00a6;
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 4px;
+margin: 20px 0;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+background-color: #f1f1f1;
+padding: 10px 20px;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+a. {
+text-decoration: none !important;
+}
+</style>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body data-sveltekit-preload-data="hover" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMS45LjEwIiwic2NvcmUiOjEwOTEwfV0=">
+<div style="display: contents">
+<header class="text-gray-600 body-font" style="margin: 20px;">
+<h1 id="title">Jio Cinema</h1>
+</header>
+</div>
+<main class="">
+<title>Jio Cinema</title>
+<div class="container" bis_skin_checked="1">
+<div class="flex flex-row mb-3 ml-1 gap-3 justify-center align-middle" bis_skin_checked="1" style="margin: 25px;">
+<input type="search" id="searchInput" class="relative w-[100%] col-span-4 block mx-4 rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal text-neutral-700 outline-none transition duration-300 ease-in-out focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:text-neutral-600 dark:placeholder:text-neutral-700" placeholder="Search"></div>
+<div id="listContainer" class="container grid place-items-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 mx-auto" bis_skin_checked="1">
+
+<!--
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=0032a90f57224764b183281b210ff4df" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Hindi</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=272eae19c0fb4d50a8efa0261ed53cdd" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL English</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=1472bd73a6094d0e9e30cdfd615225a2" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Haryanvi</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=a77d9c6804ab4f14abbaf4874d26c6f9" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Bhojpuri</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=a700a944e65a4cab872a606916d994f8" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Gujarati</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=bcc8f8d422bb4fdabe310a1e69056c04" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Punjabi</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=9fdb956e26594b7d90f3641cf16ad597" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Tamil</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=96d74327e4714f49b78a82329a8ab414" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Telugu</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=31ee83696bc04e449c76e3c2211ebc4b" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Kannada</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=49bf9a5c837243c09d72043b7fa2a530" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Bengali</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=89a75f3be9f64596a4f33da70a1b604a" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Malayalam</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="./ipl.php?id=eb5f992469d84cdc992ec94df7e590e1" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://static.tnnbt.in/thumb/msid-99190742,thumbsize-1429365,width-1280,height-720,resizemode-75/99190742.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">IPL Marathi</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+-->
+
+
+
+<!--Voot-->
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_Sports18_1HD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/sports18_tray-1693930594270.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">SPORTS 18 HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_NickJr" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/nick-jr-16x9-2-1626708077243.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Nick Junior</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_NickHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_1090,h_613/v3Storage/assets/nick-hd-plus-live-channels-16x9-4-1642585145139.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Nick HD+</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_SonicNick" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/sonic-16x9-2-1626707025539.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Sonic</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_1090,h_613/v3Storage/assets/colors-hindi--16x9-1714557869344.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsRishtey" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/collors-rishtey-live-channels-16x9-3-1642676080416-1674198105431-1697532377978.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Rishtey</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsBanglaHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/colors-bangla-new-16x9-4-1649659533344.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Bengla HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsKannadaHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/colors-kannada-16x9-1677754085834.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Kannada HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsMarathiHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/colors-marathi-live-channels-16x9-4-6-apr-1649257093359.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Marathi HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsGujarati" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/colors-gujarati-16x9-1713269620328.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Gujarati</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsTamilHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/ct-1644165913136.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">     
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Tamil HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsOriya" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/colors-odia-live-channels-16x9-4-1642583679866.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Oriya</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsInfinityHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/colors-infinity-live-channels-16x9-1642496946057.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Infinity HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsSuperKannada" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/colors-super-live-channels-16x9-4-1642744939924.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Super</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsCineplexHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/Live-Tv-Channels-colors-cineplex-1607514413063.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Cineplex HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_RishteyCineplex" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_960,h_540/v3Storage/assets/colors-cineplex-superhit%2016x9-1648793655358.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Cineplex Superhit</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsCineplexBollywood" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/cineplex-1713963820848.jpeg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Cineplex Bollywood</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_ColorsKannadaCinema" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/colors-kannada-cinema-16x9-1713963481807.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">Colors Kannada Cinema</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_MTVHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/mtv-16x9-1714316345624.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">MTV HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="box1" bis_skin_checked="1">
+  <a href="play.php?id=JC_MTVBeatsHD" id="" data-sveltekit-preload-data="hover">
+    <div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
+      <img src="https://v3img.voot.com/resizeMedium,w_450,h_253/v3Storage/assets/mtv-beats-live-channels-16x9-1642675874665.jpg" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
+      <div class="mb-5 opacity-100" bis_skin_checked="1">
+        <h2 class="text-center text-sm font-bold">MTV Beats HD</h2>
+        <div class="flex justify-center space-x-1" bis_skin_checked="1">
+          <p class="text-xs text-center">Jio Cinema</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+</main>
+<div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;" bis_skin_checked="1"></div>
+<script type="text/javascript" src="channel.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+// Get search input element
+const searchInput = document.getElementById('searchInput');
+
+// Add input event listener
+searchInput.addEventListener('input', filterData);
+
+// Search functionality
+function filterData() {
+const updatedSearchValue = searchInput.value.toLowerCase();
+
+// Get all box elements
+const boxes = document.querySelectorAll('.box1');
+
+boxes.forEach((box) => {
+const h2Text = box.querySelector('h2').textContent.toLowerCase();
+const pText = box.querySelector('p').textContent.toLowerCase();
+
+if (h2Text.includes(updatedSearchValue) || pText.includes(updatedSearchValue)) {
+box.style.display = 'block'; // Show matching box
+} else {
+box.style.display = 'none'; // Hide non-matching box
+}
+});
+}
+</script>
+</body>
+
+</html>
+
