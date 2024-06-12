@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetcher JSON Data</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cacheKey = 'fetcherJsonCache';
+            const cacheExpire = 10800; // Cache expires every 3 hours (10800 seconds)
+
+            // Function to fetch JSON data
+            function fetchJsonData() {
+                return fetch('https://tplayapi.code-crafters.app/321codecrafters/fetcher.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: Date.now() }));
+                        return data;
+                    })
+                    .catch(error => {
+                        console.error('Fetch error:', error);
+                        document.body.innerHTML = '<h1>Error fetching JSON data</h1>';
+                    });
+            }
+
+            // Function to get cached JSON data
+            function getCachedJsonData() {
+                const cachedData = localStorage.getItem(cacheKey);
+                if (cachedData) {
+                    const { data, timestamp } = JSON.parse(cachedData);
+                    if (Date.now() - timestamp < cacheExpire * 1000) {
+                        return Promise.resolve(data);
+                    }
+                }
+                return fetchJsonData();
+            }
+
+            // Function to get query parameter by name
+            function getQueryParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            // Function to process JSON data
+            function processJsonData(data) {
+                const id = getQueryParam('id');
+                if (id) {
+                    const channel = data.data.channels.find(channel => channel.id === id);
+                    if (channel) {
+                        const clearKey = channel.clearkeys[0];
+                        const [lic_keyId, lic_key] = clearKey.hex.split(':');
+                        document.body.innerHTML = `<pre>${JSON.stringify({ lic_keyId, lic_key }, null, 2)}</pre>`;
+                    } else {
+                        document.body.innerHTML = "<h1>Error: Channel not found</h1>";
+                    }
+                } else {
+                    document.body.innerHTML = "<h1>Error: ID parameter missing</h1>";
+                }
+            }
+
+            // Main execution
+            getCachedJsonData().then(processJsonData);
+        });
+    </script>
+</head>
+<body>
+    <h1>Loading...</h1>
+</body>
+</html>
