@@ -35,8 +35,8 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const channelId = urlParams.get('channel');
-    const streamUrl = "http://sbpdcl.free.nf/manifest.php?id=" + channelId;
-    const licenseUrl = "http://sbpdcl.free.nf/lic.php?id=" + channelId;
+    const streamUrl = "https://allinonereborn.tech/manifest.php?id=" + channelId;
+    const licenseUrl = "https://allinonereborn.tech/lic.php?id=" + channelId;
 
     fetchLicenseData(licenseUrl).then(licenseData => {
       const playerInstance = jwplayer("player");
