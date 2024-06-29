@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Sports 1 HD Hindi</title>
+    <script src="https://cdn.jwplayer.com/libraries/SAHhwvZq.js"></script>
+</head>
+<body>
+    <div id="video" style="min-height: 100%; max-height: 100%;"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const manifestUri = 'https://bpprod3catchup.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd?begin=20240629T144946&end=20240630T150346';
+
+            jwplayer("video").setup({
+                file: manifestUri,
+                type: 'dash',
+                width: '100%',
+                aspectratio: '16:9',
+                autostart: true,
+                preload: 'none',
+                repeat: true,
+                volume: 100,
+                mute: false,
+                stretching: 'exactfit',
+                cast: {},
+                drm: {
+                    clearkey: {
+                        keyId: 'e9028c1ce4625f4e9182e669853d4141',
+                        key: '4f4c0cbc15f0d99f23326a0f03c4561d'
+                    }
+                }
+            });
+
+            jwplayer().on('error', function(event) {
+                console.error('Error code', event.code, 'message', event.message);
+            });
+        });
+    </script>
+</body>
+</html>
