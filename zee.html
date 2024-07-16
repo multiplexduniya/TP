@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Video Token</title>
+    <script>
+        async function fetchVideoToken() {
+            try {
+                // Define the URL and headers
+                const url = "https://spapi.zee5.com/singlePlayback/getDetails/secure?channel_id=0-9-bigmagic_1786965389&device_id=8acc436e-60b2-4824-86e9-3b81819e3f6d&platform_name=desktop_web&translation=en&user_language=en,hi&country=IN&state=DH&app_version=4.7.8&user_type=guest&check_parental_control=false";
+                const headers = {
+                    'Host': 'spapi.zee5.com',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0',
+                    'Accept': 'application/json',
+                    'Accept-Language': 'en-US,en;q=0.5',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Referer': 'https://www.zee5.com/',
+                    'Content-Type': 'application/json',
+                    'Origin': 'https://www.zee5.com'
+                };
+                
+                // Define the POST data
+                const postData = {
+                    "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybV9jb2RlIjoiV2ViQCQhdDM4NzEyIiwiaXNzdWVkQXQiOiIyMDI0LTA3LTEyVDIwOjMwOjMwLjYzOFoiLCJwcm9kdWN0X2NvZGUiOiJ6ZWU1MUA5NzUiLCJ0dGwiOjg2NDAwMDAwLCJpYXQiOjE3NTIzODM0MDJ9.iDiBuVz61fuOFPjZJmkvxbKtxLTwCrGdy5Uftnd6UP0",
+                    "X-Z5-Guest-Token": "8acc436e-60b2-4824-86e9-3b81819e3f6da",
+                    "x-dd-token": "eyJzY2hlbWFfdmVyc2lvbiI6IjEiLCJvc19uYW1lIjoiTi9BIiwib3NfdmVyc2lvbiI6Ik4vQSIsInBsYXRmb3JtX25hbWUiOiJDaHJvbWUiLCJwbGF0Zm9ybV92ZXJzaW9uIjoiMTA0IiwiZGV2aWNlX25hbWUiOiIiLCJhcHBfbmFtZSI6IldlYiIsImFwcF92ZXJzaW9uIjoiMi41Mi4zMSIsInBsYXllcl9jYXBhYmlsaXRpZXMiOnsiYXVkaW9fY2hhbm5lbCI6WyJTVEVSRU8iXSwidmlkZW9fY29kZWMiOlsiSDI2NCJdLCJjb250YWluZXIiOlsiTVA0IiwiVFMiXSwicGFja2FnZSI6WyJEQVNIIiwiSExTIl0sInJlc29sdXRpb24iOlsiMjQwcCIsIlNEIiwiSEQiLCJGSEQiXSwiZHluYW1pY19yYW5nZSI6WyJTRFIiXX0sInNlY3VyaXR5X2NhcGFiaWxpdGllcyI6eyJlbmNyeXB0aW9uIjpbIldJREVWSU5FX0FFU19DVFIiXSwid2lkZXZpbmVfc2VjdXJpdHlfbGV2ZWwiOlsiTDMiXSwiaGRjcF92ZXJzaW9uIjpbIkhEQ1BfVjEiLCJIRENQX1YyIiwiSERDUF9WMl8xIiwiSERDUF9WMl8yIl19fQ=="
+                };
+                
+                // Send the POST request
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(postData)
+                });
+                
+                // Check if request was successful
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                
+                // Parse JSON response
+                const jsonResponse = await response.json();
+                
+                // Check if video_token exists
+                if ('keyOsDetails' in jsonResponse && 'video_token' in jsonResponse['keyOsDetails']) {
+                    const videoTokenUrl = jsonResponse['keyOsDetails']['video_token'];
+
+                    // Fetch .m3u8 file and extract ?hdntl= parameter
+                    const responseM3u8 = await fetch(videoTokenUrl, {
+                        headers: {
+                            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0'
+                        }
+                    });
+                    
+                    if (!responseM3u8.ok) {
+                        throw new Error(`Failed to fetch .m3u8 file! Status: ${responseM3u8.status}`);
+                    }
+                    
+                    const content = await responseM3u8.text();
+                    
+                    // Regular expression to extract ?hdntl= parameter
+                    const pattern = /\?hdntl=[^\s"]+/;
+                    const matches = content.match(pattern);
+                    
+                    if (matches) {
+                        const hdntlParam = matches[0];
+                        const result = {
+                            hdntl: hdntlParam
+                        };
+                        
+                        // Display result in JSON format
+                        document.getElementById('result').textContent = JSON.stringify(result, null, 4);
+                    } else {
+                        throw new Error("No match found for ?hdntl parameter.");
+                    }
+                } else {
+                    throw new Error("video_token not found in the response.");
+                }
+            } catch (error) {
+                console.error(error);
+                alert(error.message);
+            }
+        }
+        
+        // Fetch video token on page load
+        window.addEventListener('DOMContentLoaded', (event) => {
+            fetchVideoToken();
+        });
+    </script>
+</head>
+<body>
+    <h1>Fetch Video Token</h1>
+    <pre id="result">Loading...</pre>
+</body>
+</html>
